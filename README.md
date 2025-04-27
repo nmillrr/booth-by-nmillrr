@@ -73,35 +73,6 @@ A small photo processing web app with React frontend and Node.js backend. Inspir
    ```
    This will start both the frontend (http://localhost:5173) and backend (http://localhost:3001) servers.
 
-## Deployment
-
-### Vercel Monorepo
-
-1. Connect your GitHub repository to Vercel
-2. Configure the project:
-   - Build Command: `npm run build`
-   - Output Directory: `frontend/dist`
-   - Install Command: `npm run install:all`
-3. Add the following environment variables:
-   - `NODE_ENV`: `production`
-   - `CORS_ORIGIN`: Your frontend URL (e.g., `https://your-app.vercel.app`)
-   - `MAX_FILE_SIZE`: `10485760` (or your preferred limit)
-   - `ENABLE_SERVERLESS`: `true`
-4. Deploy!
-
-## Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| NODE_ENV | Environment (development/production) | development |
-| PORT | Backend server port | 3001 |
-| CORS_ORIGIN | Allowed origins for CORS | http://localhost:5173 |
-| MAX_FILE_SIZE | Maximum file upload size in bytes | 10485760 (10MB) |
-| IMAGE_QUALITY | JPEG image quality (1-100) | 85 |
-| MAX_WIDTH | Maximum width for processed images | 1600 |
-| MAX_HEIGHT | Maximum height for processed images | 1600 |
-| ENABLE_SERVERLESS | Enable serverless mode | false |
-
 ## License
 
 MIT
