@@ -1,6 +1,6 @@
-# Photo Booth 📸✨
+# Booth by nmillrr 📸
 
-A modern photo processing web application with React frontend and Node.js backend. Upload, process, and download images with beautiful filters and effects.
+A small photo processing web app with React frontend and Node.js backend. Inspired by Booth by Bryant, this app turns images into vintage photobooth-styled photos.
 
 ## Features
 
@@ -75,7 +75,7 @@ A modern photo processing web application with React frontend and Node.js backen
 
 ## Deployment
 
-### Option 1: Vercel Monorepo (Recommended)
+### Vercel Monorepo
 
 1. Connect your GitHub repository to Vercel
 2. Configure the project:
@@ -88,39 +88,6 @@ A modern photo processing web application with React frontend and Node.js backen
    - `MAX_FILE_SIZE`: `10485760` (or your preferred limit)
    - `ENABLE_SERVERLESS`: `true`
 4. Deploy!
-
-### Option 2: Separate Deployments
-
-#### Frontend (Vercel)
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Build the frontend:
-   ```bash
-   npm run build
-   ```
-
-3. Deploy to Vercel:
-   ```bash
-   vercel --prod
-   ```
-
-#### Backend (Render)
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-
-2. Create a new Web Service on Render
-3. Connect your repository
-4. Configure the service:
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-   - Add environment variables from `.env.example`
 
 ## Environment Variables
 

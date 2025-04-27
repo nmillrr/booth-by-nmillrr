@@ -1,25 +1,19 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { PhotoProvider } from './context/PhotoContext';
-import Layout from './components/Layout';
-import LandingPage from './pages/LandingPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UploadPage from './pages/UploadPage';
-import ProcessingPage from './pages/ProcessingPage';
-import ResultPage from './pages/ResultPage';
-import './App.css';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <PhotoProvider>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route path="/processing" element={<ProcessingPage />} />
-          <Route path="/result" element={<ResultPage />} />
-        </Routes>
-      </Layout>
-    </PhotoProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UploadPage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfUse />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

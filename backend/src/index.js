@@ -11,6 +11,7 @@ const config = require('./config/app');
 const imageRoutes = require('./routes/imageRoutes');
 const testRoutes = require('./routes/testRoutes');
 const errorHandler = require('./middleware/errorHandler');
+const cleanupService = require('./utils/cleanupService');
 
 // Initialize Express app
 const app = express();
@@ -124,6 +125,14 @@ app.use((req, res) => {
 // Error handling middleware
 app.use(errorHandler);
 
+// Initialize cleanup service for uploads directory
+// This ensures images are deleted after 24 hours as stated in our privacy notice
+if (!process.env.VERCEL) { // Skip cleanup in serverless environment
+  // Schedule cleanup every 6 hours, delete files older than 24 hours
+  cleanupService.scheduleCleanup(uploadsDir, 6, 24);
+  console.log('Scheduled automatic cleanup of uploaded files (24-hour retention)');
+}
+
 // Start server
 const server = app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port} in ${config.env} mode`);
@@ -134,10 +143,15 @@ const server = app.listen(port, '0.0.0.0', () => {
   if (err.code === 'EADDRINUSE') {
     console.error(`Port ${port} is already in use. Trying port ${port + 1}...`);
     // Try alternate port
-    app.listen(port + 1, '0.0.0.0', () => {
+    const altServer = app.listen(port + 1, '0.0.0.0', () => {
       console.log(`Server running on alternate port ${port + 1} in ${config.env} mode`);
       console.log(`Uploads directory: ${uploadsDir}`);
       console.log(`API URL: http://localhost:${port + 1}/api`);
+      
+      // Run cleanup on alternate server too
+      if (!process.env.VERCEL && altServer) {
+        cleanupService.scheduleCleanup(uploadsDir, 6, 24);
+      }
     });
   } else {
     console.error('Server error:', err);

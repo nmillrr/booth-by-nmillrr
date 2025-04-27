@@ -10,6 +10,17 @@ const os = require('os');
 const imageRoutes = require('../backend/src/routes/imageRoutes');
 const errorHandler = require('../backend/src/middleware/errorHandler');
 
+/**
+ * Privacy Policy Notice:
+ * 
+ * Photos uploaded to Booth by nmillrr are only temporarily processed for styling purposes 
+ * and are automatically deleted after 24 hours. We do not store, share, or use your images
+ * for any other purpose. No personal data is collected during processing.
+ * 
+ * In serverless environments, images are processed in memory and are not persisted
+ * beyond the lifecycle of the function execution, which is typically seconds.
+ */
+
 // Initialize Express app
 const app = express();
 
