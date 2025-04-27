@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: photo-booth-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: CORS_ORIGIN
+        fromGroup: production-settings
+      - key: MAX_FILE_SIZE
+        value: 10485760
+      - key: IMAGE_QUALITY
+        value: 85
+      - key: MAX_WIDTH
+        value: 1600
+      - key: MAX_HEIGHT
+        value: 1600
+
+envVarGroups:
+  - name: production-settings
+    envVars:
+      - key: CORS_ORIGIN
+        value: https://your-frontend-url.vercel.app
+        # Replace with your actual frontend URL
