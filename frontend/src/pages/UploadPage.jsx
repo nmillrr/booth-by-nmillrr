@@ -332,7 +332,6 @@ export default function UploadPage() {
           <div className="flex justify-center space-x-4 my-3">
             <a href="/privacy" className="text-xs text-indigo-500 hover:text-indigo-600 transition-colors">Privacy Policy</a>
             <a href="/terms" className="text-xs text-indigo-500 hover:text-indigo-600 transition-colors">Terms of Use</a>
-            <a href="/contact" className="text-xs text-indigo-500 hover:text-indigo-600 transition-colors">Contact</a>
           </div>
           <p>© {new Date().getFullYear()} Booth by nmillrr ✨ | Made with 🩵 by <a href="https://nmillrr.framer.ai/">nmillrr</a></p>
         </footer>
