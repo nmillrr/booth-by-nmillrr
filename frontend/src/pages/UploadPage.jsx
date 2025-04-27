@@ -211,8 +211,8 @@ export default function UploadPage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-2">Photo Booth Magic</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">Transform your photos with AI-powered magic. Upload your image and watch it turn into a beautiful masterpiece in seconds.</p>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-2">Booth by nmillrr</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">Come step into the booth! Turn your selfies into vintage-style photobooth prints.</p>
         </div>
         
         {/* Main upload section */}
@@ -232,8 +232,8 @@ export default function UploadPage() {
           
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="text-3xl mb-3">🪄</div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Magic Filters</h3>
-            <p className="text-gray-600">Our unique filters bring out the best in every photo.</p>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Vintage Filter</h3>
+            <p className="text-gray-600">Our unique filter bring out the best in every photo.</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -325,7 +325,7 @@ export default function UploadPage() {
           <div className="mb-3 max-w-2xl mx-auto">
             <h4 className="font-medium text-gray-600 mb-1">Privacy Notice</h4>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Your privacy matters to us. Photos uploaded to Photo Booth Magic are only temporarily processed for styling purposes and are automatically deleted after 24 hours. 
+              Your privacy matters to us. Photos uploaded to the Booth are only temporarily processed for styling purposes and are automatically deleted after 24 hours. 
               We do not store, share, or use your images for any other purpose. No personal data is collected during processing.
             </p>
           </div>

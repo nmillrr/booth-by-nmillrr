@@ -115,7 +115,7 @@ export default function ImageUploader() {
           >
             <span className="flex items-center justify-center">
               <span className="mr-2">✨</span>
-              Create Magic
+              Smile!
             </span>
           </button>
         ) : null;

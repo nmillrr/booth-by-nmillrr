@@ -16,14 +16,14 @@ export default function TermsOfUse() {
           
           <h2 className="text-xl font-semibold text-gray-800 mb-3">Agreement to Terms</h2>
           <p className="mb-4">
-            By accessing and using Photo Booth Magic, you agree to be bound by these Terms of Use. 
+            By accessing and using Booth by nmillrr, you agree to be bound by these Terms of Use. 
             If you do not agree to these Terms, you should not use our service.
           </p>
           
           <h2 className="text-xl font-semibold text-gray-800 mb-3">Description of Service</h2>
           <p className="mb-4">
-            Photo Booth Magic is a web application that allows users to upload and process photos with 
-            various filters and effects. The service is provided "as is" and may be updated or modified at any time.
+            Booth by nmillrr is a web application that allows users to upload and process photos with 
+            vintage photobooth-style effects. The service is provided "as is" and may be updated or modified at any time.
           </p>
           
           <h2 className="text-xl font-semibold text-gray-800 mb-3">User Responsibilities</h2>
@@ -42,7 +42,7 @@ export default function TermsOfUse() {
             You retain all rights to your original images. We do not claim ownership of any content you upload to our service.
           </p>
           <p className="mb-4">
-            All aspects of the Photo Booth Magic service, including but not limited to the design, text, graphics, 
+            All aspects of the Booth by nmillrr service, including but not limited to the design, text, graphics, 
             logo, and software, are owned by us and are protected by copyright, trademark, and other intellectual property laws.
           </p>
           
@@ -71,15 +71,15 @@ export default function TermsOfUse() {
             These Terms shall be governed by the laws of [Your Jurisdiction], without respect to its conflict of law principles.
           </p>
           
-          <h2 className="text-xl font-semibold text-gray-800 mb-3">Contact</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-3">Updates to Terms</h2>
           <p className="mb-4">
-            If you have any questions about these Terms, please contact us at: terms@photoboothmagic.example.com
+            These Terms were last updated on {new Date().toLocaleDateString()} and may be revised periodically.
           </p>
         </div>
         
         <div className="mt-8 border-t pt-4">
           <a href="/" className="text-indigo-600 hover:text-indigo-800 transition-colors">
-            &larr; Back to Photo Booth
+            &larr; Back to Booth
           </a>
         </div>
       </div>

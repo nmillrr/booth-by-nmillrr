@@ -72,7 +72,10 @@ export default function PrivacyPolicy() {
             Privacy Policy on this page and updating the "Last Updated" date.
           </p>
           
-          <h2 className="text-xl font-semibold text-gray-800 mb-3">Contact Us</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-3">Updates to this Policy</h2>
+          <p className="mb-4">
+            This policy was last updated on {new Date().toLocaleDateString()} and may be revised periodically.
+          </p>
         </div>
         
         <div className="mt-8 border-t pt-4">
